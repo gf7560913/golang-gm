@@ -1,4 +1,4 @@
-//created by zht
+//created by yj
 //reference to https://github.com/tjfoc/gmsm/sm2/pkcs8.go
 //x509 oprate sm2 key
 

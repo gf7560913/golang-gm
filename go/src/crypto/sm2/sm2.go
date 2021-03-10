@@ -436,7 +436,7 @@ func Decrypt(prv *PrivateKey, c []byte) (m []byte, err error) {
 	return m1, nil
 }
 
-//added by zht
+//added by yj
 func (priv *PrivateKey) SignSm2(rand io.Reader, msg []byte, opts crypto.SignerOpts) ([]byte, error) {
 	pubkey := &PublicKey{
 		Curve: priv.Curve,
@@ -453,7 +453,7 @@ func (priv *PrivateKey) SignSm2(rand io.Reader, msg []byte, opts crypto.SignerOp
 	return asn1.Marshal(sm2Signature{r, s})
 }
 
-//added by zht
+//added by yj
 func (pub *PublicKey) VerifySm2(msg []byte, sign []byte) bool {
 	sm2Sig := new(sm2Signature)
 	if _, err := asn1.Unmarshal(sign, sm2Sig); err != nil {
